@@ -9,170 +9,7 @@
     />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-          <p class="fw-bolder">SUPAK</p></a
-        >
-        <small>Reporting Crime and Violation</small>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                aria-current="page"
-                href="report_incident.html"
-                >REPORT INCIDENT</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                aria-current="page"
-                href="res_profile.html"
-                >PROFILE</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                aria-current="page"
-                href="summary.html"
-                >SUMMARY</a
-              >
-            </li>
-
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                REPORT (SEC)
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a class="dropdown-item" href="report_lists.html">List</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="report_details.html"
-                    >Details</a
-                  >
-                </li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="incident_prof.html"
-                    >Incident Profile</a
-                  >
-                </li><li>
-                  <a class="dropdown-item" href="violation_prof.html"
-                    >Violation Profile</a
-                  >
-                </li>
-                 
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                REPORT (BCPO)
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a class="dropdown-item" href="list_bcpo.html">List</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="details_bcpo.html">Details</a>
-                </li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="confirm_bcpo.html"
-                    >Confirmation</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-               REPORT (CAPT)
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a class="dropdown-item" href="review_incident.html"
-                    >Review</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                REPORT (STAFF)
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a class="dropdown-item" href="publish_staff.html">Publish</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="reading_feedback.html"
-                    >Feedback</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="announcement.html"
-                    >Announcement</a
-                  >
-                </li>
-              </ul>
-            </li>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a class="dropdown-item" href="review_incident.html">Review</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="publish_staff.html">Publish</a>
-                </li>
-               
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <?php require('header.php') ?>
     <div class="card">
         <div class="card-header"><h5>INCIDENT DETAILS</h5></div>
         <div class="card-body">
@@ -187,7 +24,8 @@
           </p>
           <p>Reported by: Leonardo Emparador Date: 04-24-21 11:03PM</p>
           <p class="fw-bold"> View Attachments ></p>
-          <button type="button" class="btn btn-danger" onclick="location.href = 'confirm_bcpo.html';">CONFIRM INCIDENT</button>
+          <button type="button" class="btn btn-danger" onclick="location.href = 'confirm_bcpo.php';">CONFIRM INCIDENT</button>
+          <button type="button" class="btn btn-warning" onclick="location.href = 'confirm_bcpo_false.php';">FALSE REPORT</button>
           <p></p>
           
           <p class="fw-bold">Messages:</p>
@@ -229,7 +67,7 @@
                       <li class="agent clearfix">
                         <span class="chat-img left clearfix mx-2">
                           <img
-                            src="http://placehold.it/50/55C1E7/fff&text=U"
+                            src="u.png"
                             alt="Agent"
                             class="img-circle"
                           />
@@ -248,7 +86,7 @@
                       <li class="admin clearfix">
                         <span class="chat-img right clearfix mx-2">
                           <img
-                            src="http://placehold.it/50/FA6F57/fff&text=ME"
+                            src="me.png"
                             alt="Admin"
                             class="img-circle"
                           />
@@ -267,7 +105,7 @@
                       <li class="agent clearfix">
                         <span class="chat-img left clearfix mx-2">
                           <img
-                            src="http://placehold.it/50/55C1E7/fff&text=U"
+                            src="u.png"
                             alt="Agent"
                             class="img-circle"
                           />
